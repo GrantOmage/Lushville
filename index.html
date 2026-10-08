@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lushville | Early Childhood Montessori Educator in Lagos</title>
+<meta name="description" content="Lushville is a certified early childhood Montessori educator offering physical and online classes for children aged 0 to 9, in Lagos and across Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --linen:#EAE5DB;
+    --sand:#D3C7B2;
+    --wood:#B9A687;
+    --stone:#A39E94;
+    --slate:#5B5E62;
+    --charcoal:#2E2F31;
+    --line:rgba(46,47,49,0.16);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Figtree', system-ui, sans-serif;
+    font-size:1.05rem;
+    background:var(--linen);
+    color:var(--charcoal);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Young Serif', Georgia, serif; font-weight:400; line-height:1.15;}
+  a{color:inherit;}
+  :focus-visible{outline:3px solid var(--charcoal); outline-offset:3px;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
+
+  /* header */
+  header{padding:22px 0; border-bottom:1px solid var(--line);}
+  .bar{display:flex; justify-content:space-between; align-items:center; gap:20px;}
+  .brand{font-family:'Young Serif', serif; font-size:1.5rem; text-decoration:none; letter-spacing:0.01em;}
+  .bar nav{display:flex; gap:28px; font-size:0.95rem; font-weight:500;}
+  .bar nav a{text-decoration:none; color:var(--slate);}
+  .bar nav a:hover{color:var(--charcoal);}
+
+  .btn{
+    display:inline-block; padding:14px 26px; border-radius:999px;
+    background:var(--charcoal); color:var(--linen);
+    text-decoration:none; font-weight:600; font-size:1rem;
+    transition:background 0.2s;
+  }
+  .btn:hover{background:#000;}
+  .btn.light{background:var(--linen); color:var(--charcoal);}
+  .btn.light:hover{background:#fff;}
+
+  /* hero */
+  .hero{padding:80px 0 90px;}
+  .hero-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;}
+  .hero h1{font-size:clamp(2.4rem, 5.4vw, 4rem); margin-bottom:22px; max-width:14ch;}
+  .hero p.lead{font-size:1.2rem; color:var(--slate); max-width:42ch; margin-bottom:34px;}
+  .where{margin-top:22px; font-size:0.95rem; color:var(--slate);}
+
+  /* the shelf: graduated rods, like Montessori number rods */
+  .shelf{position:relative; height:340px; padding-bottom:14px;}
+  .rods{display:flex; align-items:flex-end; gap:8px; height:100%; padding:0 6px;}
+  .rod{
+    flex:1; border-radius:4px 4px 0 0;
+    transform-origin:bottom; animation:grow 0.9s cubic-bezier(.2,.7,.2,1) both;
+  }
+  .rod:nth-child(1){height:10%; background:var(--sand); animation-delay:0.05s;}
+  .rod:nth-child(2){height:20%; background:var(--stone); animation-delay:0.12s;}
+  .rod:nth-child(3){height:30%; background:var(--sand); animation-delay:0.19s;}
+  .rod:nth-child(4){height:40%; background:var(--stone); animation-delay:0.26s;}
+  .rod:nth-child(5){height:50%; background:var(--sand); animation-delay:0.33s;}
+  .rod:nth-child(6){height:60%; background:var(--stone); animation-delay:0.40s;}
+  .rod:nth-child(7){height:70%; background:var(--sand); animation-delay:0.47s;}
+  .rod:nth-child(8){height:80%; background:var(--stone); animation-delay:0.54s;}
+  .rod:nth-child(9){height:90%; background:var(--sand); animation-delay:0.61s;}
+  .rod:nth-child(10){height:100%; background:var(--stone); animation-delay:0.68s;}
+  .plank{position:absolute; left:0; right:0; bottom:0; height:14px; background:var(--wood); border-radius:3px;}
+  @keyframes grow{from{transform:scaleY(0);} to{transform:scaleY(1);}}
+
+  /* sections */
+  section{padding:84px 0;}
+  .sand-bg{background:var(--sand);}
+  h2{font-size:clamp(1.8rem, 3.4vw, 2.5rem); margin-bottom:14px;}
+  .intro{color:var(--slate); max-width:56ch; margin-bottom:48px;}
+  .sand-bg .intro{color:#45474A;}
+
+  .principles{border-top:1px solid var(--line);}
+  .principle{
+    display:grid; grid-template-columns:0.8fr 1.2fr; gap:40px;
+    padding:28px 0; border-bottom:1px solid var(--line);
+  }
+  .principle h3{font-size:1.35rem;}
+  .principle p{color:var(--slate); max-width:56ch;}
+
+  .offers{display:grid; gap:0;}
+  .offer{padding:30px 0; border-top:1px solid rgba(46,47,49,0.25);}
+  .offer:last-child{border-bottom:1px solid rgba(46,47,49,0.25);}
+  .offer h3{font-size:1.5rem; margin-bottom:8px;}
+  .offer p{max-width:60ch; color:#45474A;}
+
+  .steps{list-style:none; counter-reset:step; display:grid; grid-template-columns:repeat(3, 1fr); gap:36px;}
+  .steps li{counter-increment:step;}
+  .steps li::before{
+    content:counter(step); font-family:'Young Serif', serif; font-size:2.4rem; color:var(--stone);
+    display:block; margin-bottom:8px;
+  }
+  .steps h3{font-size:1.2rem; margin-bottom:8px;}
+  .steps p{color:var(--slate);}
+
+  .contact{background:var(--charcoal); color:var(--linen); text-align:center;}
+  .contact h2{max-width:16ch; margin:0 auto 16px;}
+  .contact p{color:var(--sand); max-width:46ch; margin:0 auto 32px;}
+  .contact .small{margin:26px auto 0; font-size:0.92rem;}
+
+  footer{padding:32px 0; font-size:0.9rem; color:var(--slate); text-align:center;}
+
+  @media (max-width:820px){
+    .hero{padding:56px 0 64px;}
+    .hero-grid{grid-template-columns:1fr; gap:44px;}
+    .shelf{height:240px;}
+    .principle{grid-template-columns:1fr; gap:8px;}
+    .steps{grid-template-columns:1fr; gap:28px;}
+    .bar nav{display:none;}
+    section{padding:64px 0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .rod{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">Lushville</a>
+    <nav aria-label="Main">
+      <a href="#approach">Our approach</a>
+      <a href="#offer">Classes</a>
+      <a href="#about">About</a>
+      <a href="#start">Getting started</a>
+    </nav>
+    <a class="btn" data-wa href="https://wa.me/234XXXXXXXXXX">WhatsApp us</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Early learning that follows the child.</h1>
+        <p class="lead">Lushville is a Montessori educator for children aged 0 to 9. We teach in person and online, helping families in Lagos and across Nigeria build a calm, hands-on start to learning.</p>
+        <a class="btn" data-wa href="https://wa.me/234XXXXXXXXXX">Message us on WhatsApp</a>
+        <p class="where">Lagos and across Nigeria</p>
+      </div>
+      <div class="shelf" role="img" aria-label="Ten wooden rods in increasing lengths on a shelf, like Montessori number rods">
+        <div class="rods">
+          <div class="rod"></div><div class="rod"></div><div class="rod"></div><div class="rod"></div><div class="rod"></div>
+          <div class="rod"></div><div class="rod"></div><div class="rod"></div><div class="rod"></div><div class="rod"></div>
+        </div>
+        <div class="plank"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sand-bg" id="approach">
+    <div class="wrap">
+      <h2>How Montessori learning works</h2>
+      <p class="intro">Maria Montessori built her method on careful observation of children. The ideas below shape everything we do with them.</p>
+      <div class="principles">
+        <div class="principle">
+          <h3>Child-led learning</h3>
+          <p>Children choose activities that interest them and work at their own pace, which builds focus and a real wish to learn.</p>
+        </div>
+        <div class="principle">
+          <h3>Hands-on materials</h3>
+          <p>Counting rods, sandpaper letters and shape puzzles let a child touch an idea before they meet it on paper.</p>
+        </div>
+        <div class="principle">
+          <h3>A prepared space</h3>
+          <p>Low shelves, simple trays and a tidy layout let children reach what they need and put it back themselves.</p>
+        </div>
+        <div class="principle">
+          <h3>Growing independence</h3>
+          <p>Pouring, dressing, tidying and caring for the room give small children quiet confidence in what they can do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="offer">
+    <div class="wrap">
+      <h2>Classes in person and online</h2>
+      <p class="intro">For children from birth to 9 years. Tell us your child's age and we will suggest what fits best.</p>
+      <div class="offers">
+        <div class="offer">
+          <h3>Physical classes</h3>
+          <p>Hands-on Montessori sessions with real materials, for families who can join us in person in Lagos.</p>
+        </div>
+        <div class="offer">
+          <h3>Online classes</h3>
+          <p>Live Montessori-guided sessions over Google Meet for children anywhere in Nigeria, from the comfort of your home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sand-bg" id="about">
+    <div class="wrap">
+      <h2>Meet Cynthia A. Omage</h2>
+      <p class="intro">Lushville is led by Cynthia, a qualified early childhood educator.</p>
+      <div class="principles">
+        <div class="principle">
+          <h3>Certified early childhood educator</h3>
+          <p>Professionally certified to teach and care for young children.</p>
+        </div>
+        <div class="principle">
+          <h3>Foundation certificate in early years education</h3>
+          <p>Training in how children learn and develop in their first years.</p>
+        </div>
+        <div class="principle">
+          <h3>Certification in curriculum</h3>
+          <p>Training in planning and delivering structured learning for children.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="wrap">
+      <h2>Getting started</h2>
+      <p class="intro">No forms and no pressure. It begins with a conversation.</p>
+      <ol class="steps">
+        <li>
+          <h3>Send us a message</h3>
+          <p>Say hello on WhatsApp and tell us your child's age and what you are looking for.</p>
+        </li>
+        <li>
+          <h3>We talk it through</h3>
+          <p>We answer your questions and explain how Lushville can support your child.</p>
+        </li>
+        <li>
+          <h3>Pick the right fit</h3>
+          <p>Together we choose between physical and online classes, whichever suits your family and location.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Ready to talk about your child?</h2>
+      <p>Send a message on WhatsApp and we will reply as soon as we can.</p>
+      <a class="btn light" data-wa href="https://wa.me/234XXXXXXXXXX">Message us on WhatsApp</a>
+      <p class="small">Serving Lagos and families across Nigeria.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr">2026</span> Lushville by Cynthia A. Omage. All rights reserved.</div>
+</footer>
+
+<script>
+  // EDIT HERE: put the WhatsApp number in international format, digits only.
+  // Example: 2348012345678 (Nigeria 234 + number without the leading 0)
+  const WHATSAPP_NUMBER = "234XXXXXXXXXX";
+  const MESSAGE = "Hello Lushville, I'd like to ask about classes for my child.";
+
+  const link = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(MESSAGE);
+  document.querySelectorAll("[data-wa]").forEach(a => { a.href = link; a.target = "_blank"; a.rel = "noopener"; });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+  
