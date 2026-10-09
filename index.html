@@ -36,7 +36,8 @@
   /* header */
   header{padding:22px 0; border-bottom:1px solid var(--line);}
   .bar{display:flex; justify-content:space-between; align-items:center; gap:20px;}
-  .brand{font-family:'Young Serif', serif; font-size:1.5rem; text-decoration:none; letter-spacing:0.01em;}
+  .brand{font-family:'Young Serif', serif; font-size:1.5rem; text-decoration:none; letter-spacing:0.01em; color:var(--charcoal);}
+  .brand-lush{color:var(--wood);}
   .bar nav{display:flex; gap:28px; font-size:0.95rem; font-weight:500;}
   .bar nav a{text-decoration:none; color:var(--slate);}
   .bar nav a:hover{color:var(--charcoal);}
@@ -134,7 +135,7 @@
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top">Lushville</a>
+    <a class="brand" href="#top"><span class="brand-lush">Lush</span>ville</a>
     <nav aria-label="Main">
       <a href="#approach">Our approach</a>
       <a href="#offer">Classes</a>
@@ -151,7 +152,7 @@
     <div class="wrap hero-grid">
       <div>
         <h1>Early learning that follows the child.</h1>
-        <p class="lead">Lushville is a Montessori educator for children aged 0 to 9. We teach in person and online, helping families in Lagos and across Nigeria build a calm, hands-on start to learning.</p>
+        <p class="lead">Lushville is a Montessori education firm for children aged 0 to 9. We teach in person and online, helping families in Lagos and across Nigeria build a calm, hands-on start to learning.</p>
         <a class="btn" data-wa href="https://wa.me/234XXXXXXXXXX">Message us on WhatsApp</a>
         <p class="where">Lagos and across Nigeria</p>
       </div>
@@ -253,7 +254,7 @@
     <div class="wrap">
       <h2>Ready to talk about your child?</h2>
       <p>Send a message on WhatsApp and we will reply as soon as we can.</p>
-      <a class="btn light" data-wa href="https://wa.me/2348158588529">Message us on WhatsApp</a>
+      <a class="btn light" data-wa href="https://wa.me/2348182161454">Message us on WhatsApp</a>
       <p class="small">Serving Lagos and families across Nigeria.</p>
     </div>
   </section>
@@ -267,7 +268,7 @@
 <script>
   // EDIT HERE: put the WhatsApp number in international format, digits only.
   // Example: 2348012345678 (Nigeria 234 + number without the leading 0)
-  const WHATSAPP_NUMBER = "2348158588529";
+  const WHATSAPP_NUMBER = "2348182161454";
   const MESSAGE = "Hello Lushville, I'd like to ask about classes for my child.";
 
   const link = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(MESSAGE);
@@ -276,5 +277,5 @@
 </script>
 
 </body>
-</html>
+  </html>
   
